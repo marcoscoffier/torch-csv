@@ -27,7 +27,7 @@ function csv.open(...)
    local _, filename = dok.unpack(
       {...},
       'csv.open',
-      [[
+      [=[
 
 Opens csv file <filename> reads and returns an anonymous function
 which can be called to step line by line thorugh the file.
@@ -38,7 +38,7 @@ USAGE:
    
 Returns nil at EOF.
 
-      ]],
+      ]=],
       {arg='filename', type='string',
        help='filename of csv to open', req=true}
    )
@@ -103,7 +103,7 @@ function csv.make_reverse_table (...)
    local _, row = dok.unpack(
       {...},
       'csv.make_reverse_table',
-      [[
+      [=[
 Simplifies access to a named column in the csv file by hashing column name to the column number
 
 EXAMPLE:
@@ -121,7 +121,7 @@ t7> =rheader
  [bby]            = 2
  [bbw]            = 3
  [bbh]            = 4}
-      ]],
+      ]=],
       {arg='row', type='table',
        help='parsed header of csv', req=true}
    )
@@ -136,7 +136,7 @@ function csv.open_with_header (...)
    local _, filename = dok.unpack(
       {...},
       'csv.open_with_header',
-      [[
+      [=[
 Opens csv file <filename> reads and returns an anonymous function
 which can be called to step line by line thorugh the file. The
 anonymous function returns nil at EOF.
@@ -159,7 +159,7 @@ t7> =rheader
 t7> line = csvg()
 t7> =line[rheader["bbx"]]
 34398
-      ]],
+      ]=],
       {arg='filename', type='string',
        help='filename of csv to open', req=true}
    )
